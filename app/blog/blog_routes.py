@@ -72,9 +72,11 @@ def jscheck():
             print('curr obj: ',x)
             x['name'] = x['name'].upper()
             x['age'] += 5
+    
 
 
-   return jsonify(result = jsn['arr'])
+        return jsonify(result = jsn['arr'])
+   return "hi"
    
 
 
