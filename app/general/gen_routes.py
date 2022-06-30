@@ -7,6 +7,17 @@ from app import db
 bp_gen = Blueprint('general', __name__, template_folder='templates')
 print('name - general', __name__)
 
+bp_blog = Blueprint('blog', __name__,url_prefix='/blog',template_folder="templates")
+
+
+
+
+@bp_blog.route('/blog')
+def blog():
+    return render_template(
+        '/blog/index.html',
+        title='blog',
+    )
 
 @bp_gen.route('/')
 @bp_gen.route('/index')

@@ -11,7 +11,7 @@ import json
 bp_blog = Blueprint('blog', __name__,url_prefix='/blog',template_folder="templates")
 
 
-@bp_blog.route('/')
+@bp_blog.route('/blog')
 def index():
     db = get_db()
     posts = db.execute(

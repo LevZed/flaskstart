@@ -25,6 +25,7 @@
             </span>
 
             <a class="tag is-link" href="{{ url_for('blog.update', id=post['id']) }}">Изменить</a>
+            <a class="tag is-link" id="select">выбрать {{post['id']}}</a>
           </div>
         </div>
         {% if g.user['id'] == post['author_id'] %}
@@ -46,7 +47,16 @@
         <a class="button is-primary is-small is-link" href={{url_for("blog.create")}}>
             <strong>Создать новый блог</strong>
         </a>
+        <a id="delsel" class="button is-primary is-small is-link" href=#>
+            <strong>Удалить выбранное</strong>
+        </a>
     </div>    
+
+    <!-- <script>
+      $("#select").click(function(){
+          alert("!!!")
+      });
+    </script> -->
   {% endif %}
 
   {% endblock %}
